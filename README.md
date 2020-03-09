@@ -1,11 +1,11 @@
 # curry
 函数的柯里化
-<% codeblock %>
+```
 function curry(fn, arity, args) {
     // 闭包
     // arity用来记录fn函数的剩余的参数个数，第一次执行时不会传入arity
     var arity = arity || fn.length;
-    // args用来收集参数，第一次执行时不会传入args，所以默认为空数组
+    // args用来收集参数，第一次执行时不会传入args，所以默认为空数组;
     var args = args || [];
     
     return function () {
@@ -30,6 +30,6 @@ function add(a,b,c,d){
         }
 var addCurry(add);
 addCurry(2,3)(4)(5)
-<% endcodeblock %>
+```
 
 
